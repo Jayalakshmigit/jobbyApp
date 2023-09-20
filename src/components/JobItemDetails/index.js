@@ -231,11 +231,14 @@ class JobItemDetails extends Component {
   renderJobsFailure = () => (
     <div className="failure-img-button-container">
       <img
+        className="failure-view"
         alt="failure view"
         src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
       />
-      <h1>Oops! Something Went Wrong</h1>
-      <p>we cannot seem to find the page you are looking for</p>
+      <h1 className="failure-heading">Oops! Something Went Wrong</h1>
+      <p className="failure-description">
+        we cannot seem to find the page you are looking for
+      </p>
       <div className="btn-container-failure">
         <button
           className="failure-job-details-btn"
