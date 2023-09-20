@@ -1,0 +1,107 @@
+.similar-job-container {
+  color: #ffffff;
+  font-weight: 'Roboto';
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #272727;
+  border-radius: 10px;
+  list-style-type: none;
+}
+
+.img-container {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.title-rating {
+  margin-top: 0;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 100%;
+  margin-top: 0;
+  margin-left: 5px;
+  margin-bottom: 15px;
+}
+
+.star-rating {
+  display: flex;
+  margin-top: 0;
+}
+.star-icon {
+  color: #fbbf24;
+  font-size: 20px;
+  margin-left: 5px;
+}
+.rating {
+  color: #ffffff;
+  font-weight: 900;
+  margin-top: 0;
+  margin-left: 5px;
+}
+.location-package {
+  display: flex;
+  justify-content: space-between;
+}
+.location-job-type {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+.location-icon-container {
+  display: flex;
+}
+
+.location-icon {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.location {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.job-type {
+  margin-top: 0;
+}
+
+.package {
+  margin-top: 0;
+}
+.job-link {
+  text-decoration: none;
+}
+
+.heading {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: 'Roboto';
+  margin: 5px;
+}
+
+.description {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  margin: 5px;
+}
+
+@media screen and(max-width:767px) {
+  .similar-job-container {
+    width: 100%;
+  }
+  .title {
+    font-size: 25px;
+  }
+}
