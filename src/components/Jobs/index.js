@@ -18,7 +18,7 @@ const apiStatusConstants = {
 class Jobs extends Component {
   state = {
     jobDataDetails: [],
-    similarJobsData: [],
+    similarJobsDataDetails: [],
     apiStatus: apiStatusConstants.initial,
   }
 
@@ -64,18 +64,20 @@ class Jobs extends Component {
         })),
         title: eachItem.title,
       }))
-      const updatedSimilarJobsData = fetchedData.similar_jobs.map(eachItem => ({
-        companyLogoUrl: eachItem.company_logo_url,
-        id: eachItem.id,
-        jobDescription: eachItem.job_description,
-        employmentType: eachItem.employment_type,
-        location: eachItem.location,
-        rating: eachItem.rating,
-        title: eachItem.title,
-      }))
+      const updatedSimilarJobsDataDetails = fetchedData.similar_jobs.map(
+        eachItem => ({
+          companyLogoUrl: eachItem.company_logo_url,
+          id: eachItem.id,
+          jobDescription: eachItem.job_description,
+          employmentType: eachItem.employment_type,
+          location: eachItem.location,
+          rating: eachItem.rating,
+          title: eachItem.title,
+        }),
+      )
       this.setState({
         jobDataDetails: updatedData,
-        similarJobsData: updatedSimilarJobsData,
+        similarJobsDataDetails: updatedSimilarJobsDataDetails,
         apiStatus: apiStatusConstants.success,
       })
     } else {
@@ -86,7 +88,7 @@ class Jobs extends Component {
   }
 
   renderJobDetailsSuccess = () => {
-    const {jobDataDetails, similarJobsData} = this.state
+    const {jobDataDetails, similarJobsDataDetails} = this.state
     if (jobDataDetails.length >= 1) {
       const {
         companyLogoUrl,
@@ -162,14 +164,14 @@ class Jobs extends Component {
             <div className="company-life-img-container">
               <div className="life-heading-para-container">
                 <h1>Life at Company</h1>
-                <p>{lifeAtCompany}</p>
+                <p>{lifeAtCompany.description}</p>
               </div>
               <img src={lifeAtCompany.imageUrl} alt="life at company" />
             </div>
           </div>
           <h1 className="similar-jobs-heading">Similar Jobs</h1>
           <ul className="similar-job-ul-container">
-            {similarJobsData.map(eachItem => (
+            {similarJobsDataDetails.map(eachItem => (
               <SimilarJobs
                 key={eachItem.id}
                 similarJobsDetails={eachItem}
@@ -214,7 +216,7 @@ class Jobs extends Component {
     </div>
   )
 
-  renderJobDetails = () => {
+  renderJobsDetails = () => {
     const {apiStatus} = this.state
 
     switch (apiStatus) {
@@ -234,7 +236,7 @@ class Jobs extends Component {
       <>
         <Header />
         <div className="job-details-view-container">
-          {this.renderJobDetails()}
+          {this.renderJobsDetails()}
         </div>
       </>
     )

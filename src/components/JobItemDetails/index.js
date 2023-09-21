@@ -198,7 +198,7 @@ class JobItemDetails extends Component {
       <>
         <ul className="ul-job-items-container">
           {jobsData.map(eachItem => (
-            <JobCardItem key={eachItem.id} />
+            <JobCardItem key={eachItem.id} jobCardItemDetails={eachItem} />
           ))}
         </ul>
       </>

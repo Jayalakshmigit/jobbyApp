@@ -24,16 +24,17 @@ const Header = props => {
             />
           </Link>
         </li>
+
         <li className="nav-menu-item">
           <Link to="/" className="nav-link">
-            Home
+            <h1 className="nav-heading">Home</h1>
             <AiFillHome className="nav-icon" />
           </Link>
         </li>
 
         <li className="nav-menu-item">
           <Link to="/jobs" className="nav-link">
-            Jobs
+            <h1 className="nav-heading">Jobs</h1>
             <BsBriefcaseFill className="nav-icon" />
           </Link>
         </li>
