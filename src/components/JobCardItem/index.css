@@ -1,23 +1,25 @@
-.job-item {
-  color: #ffffff;
-  font-weight: 'Roboto';
-  padding: 15px;
-  margin-bottom: 20px;
+.job-card-item {
   background-color: #272727;
-  border-radius: 10px;
-  list-style-type: none;
+  border-radius: 15px;
+}
+
+.job-card-link {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  text-decoration: none;
+  gap: 16px;
 }
 
 .img-container {
   display: flex;
-  margin-top: 0;
-  margin-bottom: 15px;
+  border: 1px solid #ffffff;
+  gap: 10px;
 }
 
 .image {
   width: 80px;
   height: 80px;
-  margin-right: 10px;
 }
 
 .title-rating {
@@ -25,81 +27,93 @@
 }
 
 .title {
-  color: #ffffff;
-  margin-top: 0;
-  margin-left: 5px;
-  margin-bottom: 15px;
+  color: #f8fafc;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  margin: 0;
+  margin-bottom: 10px;
 }
 .star-rating {
   display: flex;
-  margin-top: 0;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ffffff;
 }
 .star-icon {
   color: #fbbf24;
-  font-size: 20px;
-  margin-left: 5px;
+  height: 22px;
+  width: 22px;
 }
 .rating {
-  color: #ffffff;
-  font-weight: 900;
-  margin-top: 0;
-  margin-left: 5px;
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  margin: 0;
 }
 .location-package {
   display: flex;
-  justify-content: space-between;
-}
-.location-job-type {
-  display: flex;
-  justify-content: space-between;
-  width: 40%;
-}
-.location-icon-container {
-  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.location-icon {
+.location-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.type-icon {
   color: #ffffff;
-  font-size: 20px;
+  height: 18px;
+  width: 18px;
 }
 
 .location {
-  margin-top: 0;
-  margin-bottom: 0;
+  color: #f8fafc;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: 'Roboto';
+  margin: 0;
 }
 
 .job-type {
-  margin-top: 0;
+  color: #f8fafc;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: 'Roboto';
+  margin: 0;
 }
 
 .package {
-  margin-top: 0;
-}
-.job-link {
-  text-decoration: none;
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  margin-left: auto;
+  margin: 0;
 }
 
 .heading {
   color: #ffffff;
-  font-size: 25px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 400;
   font-family: 'Roboto';
-  margin: 5px;
+  margin: 0;
 }
 
 .description {
   color: #ffffff;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 300;
   font-family: 'Roboto';
-  margin: 5px;
+  margin: 0;
+  line-height: 1.4;
 }
 
-@media screen and(max-width:767px) {
-  .job-item {
-    width: 100%;
-  }
-  .title {
-    font-size: 25px;
+@media screen and(min-width:768px) {
+  .job-card-item {
+    width: 90%;
   }
 }

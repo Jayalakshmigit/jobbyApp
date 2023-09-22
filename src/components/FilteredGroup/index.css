@@ -1,0 +1,44 @@
+.filtered-group-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  gap: 20px;
+}
+
+.heading {
+  color: #f8fafc;
+  font-size: 18px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  margin: 0;
+}
+
+.filters-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  gap: 15px;
+}
+
+.filters-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  height: 14px;
+  width: 14px;
+  color: #b6c5ff;
+  cursor: pointer;
+  outline: none;
+}
+
+.label {
+  color: #f1f5f9;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  margin-left: 16px;
+}
