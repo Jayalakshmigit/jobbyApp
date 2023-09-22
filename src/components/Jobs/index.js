@@ -59,9 +59,10 @@ class Jobs extends Component {
       employmentTypesChecked,
       searchInput,
     } = this.state
-    const employTypes = employmentTypesChecked.join(',')
+
+    const employmentTypes = employmentTypesChecked.join(',')
     const jwtToken = Cookies.get('jwt_token')
-    const apiUrl = `https://apis.ccbp.in/jobs?employment_type=${employTypes}&minimum_package=${activeSalaryRangeId}&search=${searchInput}`
+    const apiUrl = `https://apis.ccbp.in/jobs?employment_type=${employmentTypes}&minimum_package=${activeSalaryRangeId}&search=${searchInput}`
 
     const options = {
       headers: {
@@ -156,14 +157,14 @@ class Jobs extends Component {
         {this.renderSearchBar('smallSearchBar')}
         <Profile
           profileDetails={profileDetails}
-          profileApiStatus={profileApiStatus}
+          profileStatus={profileApiStatus}
           getProfileDetails={this.getProfileDetails}
         />
         <hr className="separator" />
         <FilteredGroup
-          updateSalaryRangeId={this.updateSalaryRangeId}
+          updatedSalaryRangeId={this.updateSalaryRangeId}
           activeSalaryRangeId={activeSalaryRangeId}
-          updateEmploymentTypesChecked={this.updateEmploymentTypesChecked}
+          updatedEmploymentTypesChecked={this.updateEmploymentTypesChecked}
           employmentTypesChecked={employmentTypesChecked}
         />
       </div>

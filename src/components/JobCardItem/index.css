@@ -1,6 +1,7 @@
 .job-card-item {
   background-color: #272727;
   border-radius: 15px;
+  padding: 5px;
 }
 
 .job-card-link {
@@ -13,7 +14,6 @@
 
 .img-container {
   display: flex;
-  border: 1px solid #ffffff;
   gap: 10px;
 }
 
@@ -38,7 +38,6 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid #ffffff;
 }
 .star-icon {
   color: #fbbf24;

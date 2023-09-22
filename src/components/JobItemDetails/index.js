@@ -46,7 +46,7 @@ class JobItemDetails extends Component {
         imageUrl: eachSkill.image_url,
         name: eachSkill.name,
       })),
-      lifeAtCompnay: {
+      lifeAtCompany: {
         description: jobDetails.life_at_company.description,
         imageUrl: jobDetails.life_at_company.image_url,
       },

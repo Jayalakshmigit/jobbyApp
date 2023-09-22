@@ -71,10 +71,10 @@ const FilteredGroup = props => {
   )
 
   const renderSalaryRangesList = () => {
-    const {updateSalaryRangeId, activeSalaryRangeId} = props
+    const {updatedSalaryRangeId, activeSalaryRangeId} = props
 
     return salaryRangesList.map(eachRange => {
-      const onChangeRange = () => updateSalaryRangeId(eachRange.salaryRangeId)
+      const onChangeRange = () => updatedSalaryRangeId(eachRange.salaryRangeId)
 
       const isChecked = eachRange.salaryRangeId === activeSalaryRangeId
 
