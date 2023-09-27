@@ -42,3 +42,8 @@
   font-family: 'Roboto';
   margin-left: 16px;
 }
+
+hr {
+  width: 100%;
+  border: 1px solid #b6c5ff;
+}
